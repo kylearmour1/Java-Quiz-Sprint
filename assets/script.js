@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
   var pages = document.querySelectorAll(".page");
   var currentPage = 0; 
-  var timeLeft = 100000;
+  var timeLeft = 60;
   var timerInterval;
   var score = 0;
 
