@@ -1,0 +1,63 @@
+body {
+  background-image: url(https://images3.alphacoders.com/114/11439.png)
+ ;
+  
+  background-size: 100% auto;
+}
+
+
+.start-button {
+  display: inline-block;
+  margin: 0;
+  width: 100px;
+  
+}
+
+.next-button {
+  display: inline-block;
+  margin: 0;
+  width: 100px;
+  
+}
+
+.page {
+  text-align: center;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+
+
+#answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+
+h1 {
+  font-size: 50px;
+  color: whitesmoke;
+}
+h2{
+  font-size: 25px;
+  color:whitesmoke
+}
+#time-left {
+  color:whitesmoke;
+  font-size: 50px;
+}
+
+
+@media screen and (max-width: 786px) {
+  body {
+      display: flex;
+      flex-direction: column;
+
+  }
+}
