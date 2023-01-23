@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function(){
         pages[currentPage].style.display = "none";
         currentPage++;
         pages[currentPage].style.display = "block";
+        if(currentPage === 6) {
+          var finalScore = document.getElementById("final-score");
+            finalScore.innerHTML = "Your final score is: " +score;
+          
+          
+         
+        }
       });
       
     }
         
     pages[i].style.display = "none";
     
-    if(currentPage === 6) {
-      var finalScore = document.querySelector("#finalScore");
-        finalScore.innerHTML = "Your final score is: " +score;
-      
-      
-     
-    }
+    
 
   }});
-

@@ -1,6 +1,6 @@
 body {
-  background-image: url(https://images3.alphacoders.com/114/11439.png)
- ;
+  background-image: url(https://images3.alphacoders.com/114/11439.png);
+ 
   
   background-size: 100% auto;
 }
@@ -37,7 +37,10 @@ body {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  
+ 
+}
+#answers button {
+width: 310px;
 }
 
 h1 {
@@ -48,11 +51,32 @@ h2{
   font-size: 25px;
   color:whitesmoke
 }
+#final-score {
+  font-size: 25px;
+  color:whitesmoke;
+
+}
 #time-left {
   color:whitesmoke;
   font-size: 50px;
 }
 
+
+.answer-button:nth-child(1) {
+  color:white; background: #666666; padding: 5px; margin-left: 35px;
+}
+
+.answer-button:nth-child(2) {
+  color:white; background: #777777; padding: 5px; margin-left: 35px;
+}
+
+.answer-button:nth-child(3) {
+  color:white; background: #888888; padding: 5px; margin-left: 35px;
+}
+
+.answer-button:nth-child(4) {
+  color:white; background: #999999; padding: 5px; margin-left: 35px;
+}
 
 @media screen and (max-width: 786px) {
   body {
