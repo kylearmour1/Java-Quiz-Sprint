@@ -47,8 +47,19 @@ document.addEventListener("DOMContentLoaded", function(){
         if(currentPage === 6) {
           var finalScore = document.getElementById("final-score");
             finalScore.innerHTML = "Your final score is: " +score;
-          
-          
+            document.getElementById("submit-button").addEventListener("click", function() {
+              var initials = document.getElementById("initials").value;
+              localStorage.setItem("initials", initials);
+              localStorage.setItem("score", score);
+
+              
+              
+            });
+            
+            var storedInitials = localStorage.getItem("initials");
+            var storedScore = localStorage.getItem("score");
+            var leaderboard = document.getElementById("leaderboard");
+            leaderboard.innerHTML = storedInitials + ": " + storedScore;
          
         }
       });

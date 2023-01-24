@@ -82,10 +82,16 @@
     
     <div id="final-score"></div>
     
-    <label for="initials-input">Initials:</label>
-    <input type="text" id="initials-input" name="initials" placeholder="Enter your initials">
-    <input type="submit" id="submit-button" value="Submit">
-</form>
+    <form id="score-form">
+      <input type="text" id="initials" placeholder="Enter your initials">
+      <input type="hidden" id="score" value="calculate user's score here">
+      <button type="submit" id="submit-button">Submit</button>
+  </form>
+  <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <div id="scores"></div>
+  </div>
+    
 </section>
 
   </section>
