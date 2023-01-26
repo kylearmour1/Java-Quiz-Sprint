@@ -88,7 +88,7 @@ h2{
   }
 }
 .alert-success{
-  font-size: 150px;
+  font-size: 40px;
   text-align:center;
   display:block;
   padding-bottom: 1000px;
@@ -99,7 +99,7 @@ h2{
   
 }
 .alert-error{
-  font-size: 150px;
+  font-size: 40px;
   text-align:center;
   display:block;
   padding-bottom:1000px ;
