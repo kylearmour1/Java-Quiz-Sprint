@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://images3.alphacoders.com/114/11439.png);
+  background-image: url(https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&w=1000&q=80);
  
   
   background-size: 100% auto;
@@ -87,3 +87,25 @@ h2{
 
   }
 }
+.alert-success{
+  font-size: 150px;
+  text-align:center;
+  display:block;
+  padding-bottom: 1000px;
+  color:green;
+  
+  
+}
+.alert-error{
+  font-size: 150px;
+  text-align:center;
+  display:block;
+  padding-bottom:1000px ;
+  color:red;
+ }
+ 
+
+
+ .div {
+  color: whitesmoke;
+ }
