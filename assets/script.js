@@ -71,17 +71,12 @@ document.addEventListener("DOMContentLoaded", function(){
           document.getElementById("submit-button").addEventListener("click", function(){
             var initials = document.getElementById("initials").value;
             var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
-            var initialsSet = new Set();
-            for (var i = 0; i < storedLeaderboardData.length; i++) {
-              initialsSet.add(storedLeaderboardData[i].initials);
-            }
-            if (!initials.has(initials)){
             storedLeaderboardData.push({initials: initials, score: score});
             localStorage.setItem("leaderboardData", JSON.stringify(storedLeaderboardData));
          
           
 
-        }});
+        });
         }
         
         var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
