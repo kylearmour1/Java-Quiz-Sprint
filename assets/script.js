@@ -16,16 +16,24 @@ document.addEventListener("DOMContentLoaded", function(){
     currentPage++;
     pages[currentPage].style.display = "block";
     //start the timer//
-    timerInterval = setInterval(function(){
+    timerInterval = setInterval(function() {
+      if(currentPage === 6) {
+        clearInterval(timerInterval);
+      }    
       timeLeft--;
       document.querySelector("#time-left").innerHTML = timeLeft;
       if(timeLeft <= 0 ){
         pages[currentPage].style.display = "none";
+       
         clearInterval(timerInterval);
         currentPage = 6;
         pages[currentPage].style.display = "block";
       alert("Times Up!");
-      }
+    } else{
+
+    }
+      
+    
       
     }, 1000);
     
@@ -70,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
           finalScore.innerHTML = "your final score is: " +score;
           document.getElementById("submit-button").addEventListener("click", function(){
             var initials = document.getElementById("initials").value;
-            var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
+            
             storedLeaderboardData.push({initials: initials, score: score});
             localStorage.setItem("leaderboardData", JSON.stringify(storedLeaderboardData));
          
@@ -78,15 +86,20 @@ document.addEventListener("DOMContentLoaded", function(){
 
         });
         }
-        
-        var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
+        if(currentPage === 6) {
+          var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
+          storedLeaderboardData.sort(function(a, b) {
+            return b.score - a.score;
+          });
           var leaderboard = document.getElementById("leaderboard");
           for (var i = 0; i < storedLeaderboardData.length; i ++){
             var leaderboardItem = document.createElement("div");
-            leaderboardItem.innerHTML = storedLeaderboardData[i].initials + "; " + storedLeaderboardData[i].score;
+            leaderboardItem.innerHTML = storedLeaderboardData[i].initials + ": " + storedLeaderboardData[i].score;
             leaderboard.appendChild(leaderboardItem);
             
           }
+        }
+       
       });
       
     }
