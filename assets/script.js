@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var timeLeft = 90;
   var timerInterval;
   var score = 0;
+  
 
   pages[currentPage].style.display = "block";
 //creating start button and making sure page is hidden when clicked//
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }else{
           timeLeft -=5;
           var alert = document.querySelector("#alert-box");
-          alert.innerHTML = "Incorrect! -5 seconds";
+          alert.innerHTML = "Incorrect!";
           alert.classList.add("alert-error");
           alert.style.display = "block";
           setTimeout(function(){
@@ -70,13 +71,19 @@ document.addEventListener("DOMContentLoaded", function(){
           document.getElementById("submit-button").addEventListener("click", function(){
             var initials = document.getElementById("initials").value;
             var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
+            var initialsSet = new Set();
+            for (var i = 0; i < storedLeaderboardData.length; i++) {
+              initialsSet.add(storedLeaderboardData[i].initials);
+            }
+            if (!initials.has(initials)){
             storedLeaderboardData.push({initials: initials, score: score});
             localStorage.setItem("leaderboardData", JSON.stringify(storedLeaderboardData));
          
           
 
-        });
+        }});
         }
+        
         var storedLeaderboardData = JSON.parse(localStorage.getItem("leaderboardData")) || [];
           var leaderboard = document.getElementById("leaderboard");
           for (var i = 0; i < storedLeaderboardData.length; i ++){
