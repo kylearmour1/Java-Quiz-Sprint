@@ -13,7 +13,7 @@ Kyle Armour
 
 https://kylearmour1.github.io/Java-Quiz-Sprint/
 
-https://github.com/kylearmour1/Java-Quiz-Sprint/settings/pages
+https://github.com/kylearmour1/Java-Quiz-Sprint
 
 
 ![image](./assets/Screenshot%202023-01-26%20at%2014-32-11%20Document.png)
